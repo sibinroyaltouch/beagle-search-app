@@ -25,7 +25,7 @@ export const searchCompanies = async (
   query: string, 
   existingNames: string[] = []
 ): Promise<CompanyInfo[]> => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+  const ai = new GoogleGenAI({ apiKey: 'AIzaSyChCya7k76mvYmdP47AOUmVMpgDPfAkSWI'});
   
   const avoidanceInstruction = existingNames.length > 0 
     ? `IMPORTANT: I have already found the following companies: ${existingNames.join(', ')}. Please find DIFFERENT and NEW companies related to the query. Do not repeat these.`
